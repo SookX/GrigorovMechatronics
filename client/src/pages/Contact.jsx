@@ -46,10 +46,9 @@ const Contact = () => {
             </Card>
           </Grid>
 
-          {/* Right Side - Contact Info */}
           <Grid item xs={12} md={6}>
             <Card sx={{ p: 4, boxShadow: 5, borderRadius: 3 }}>
-              <Typography variant="h5" sx={{ fontWeight: 600, mb: 3, color: "#1976d2" }}>
+              <Typography variant="h5" sx={{ fontWeight: 600, mb: 3 }}>
                 Contact Information
               </Typography>
 

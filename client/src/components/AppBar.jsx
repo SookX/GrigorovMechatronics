@@ -15,7 +15,6 @@ import ColorModeIconDropdown from '../customizations/ColorModeIconDropdown';
 import Sitemark from './SitemarkIcon';
 import Link from '@mui/material/Link';
 
-
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -53,37 +52,36 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <Link href="/">
-            <Sitemark />
+            <Link href="/" sx={{ color: 'primary.main' }}>
+              <Sitemark />
             </Link>
-            <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2}}>
-              <Link href="/about">
-              <Button variant="text" color="info" size="small">
-                About
-              </Button>
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+              <Link href="/about" underline="none">
+                <Button variant="text" color="primary" size="small">
+                  About
+                </Button>
               </Link>
-              <Link href="/automotive">
-              <Button variant="text" color="info" size="small">
-                Automotive Machines
-              </Button>
+              <Link href="/automotive" underline="none">
+                <Button variant="text" color="primary" size="small">
+                  Automotive Machines
+                </Button>
               </Link>
-              <Link href="/contacts">
-              <Button variant="text" color="info" size="small">
-                Gallery
-              </Button>
+              <Link href="/contacts" underline="none">
+                <Button variant="text" color="primary" size="small">
+                  Gallery
+                </Button>
               </Link>
-              <Link href="/contacts">
-              <Button variant="text" color="info" size="small">
-                Contacts
-              </Button>
+              <Link href="/contacts" underline="none">
+                <Button variant="text" color="primary" size="small">
+                  Contacts
+                </Button>
               </Link>
-              
             </Box>
           </Box>
-          
+
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
-            <ColorModeIconDropdown size="medium" />
-            <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
+            <ColorModeIconDropdown size="medium" sx={{ color: 'primary.main' }} />
+            <IconButton aria-label="Menu button" onClick={toggleDrawer(true)} sx={{ color: 'primary.main' }}>
               <MenuIcon />
             </IconButton>
             <Drawer
@@ -103,17 +101,42 @@ export default function AppAppBar() {
                     justifyContent: 'flex-end',
                   }}
                 >
-                  <IconButton onClick={toggleDrawer(false)}>
+                  <IconButton onClick={toggleDrawer(false)} sx={{ color: 'primary.main' }}>
                     <CloseRoundedIcon />
                   </IconButton>
                 </Box>
 
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
+                {/* Mobile menu items */}
+                <MenuItem>
+                  <Button color="primary" variant="text" fullWidth>
+                    Features
+                  </Button>
+                </MenuItem>
+                <MenuItem>
+                  <Button color="primary" variant="text" fullWidth>
+                    Testimonials
+                  </Button>
+                </MenuItem>
+                <MenuItem>
+                  <Button color="primary" variant="text" fullWidth>
+                    Highlights
+                  </Button>
+                </MenuItem>
+                <MenuItem>
+                  <Button color="primary" variant="text" fullWidth>
+                    Pricing
+                  </Button>
+                </MenuItem>
+                <MenuItem>
+                  <Button color="primary" variant="text" fullWidth>
+                    FAQ
+                  </Button>
+                </MenuItem>
+                <MenuItem>
+                  <Button color="primary" variant="text" fullWidth>
+                    Blog
+                  </Button>
+                </MenuItem>
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
                   <Button color="primary" variant="contained" fullWidth>

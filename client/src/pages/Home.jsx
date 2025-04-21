@@ -1,45 +1,50 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import { Container, Box } from '@mui/material';
-import Grid from "@mui/material/Grid2"
 import Hero from '../components/Hero';
 import homeImg from "../assets/home.png"
 import "../style/home.css"
+import video from "../assets/video.mp4"
 
 
 function Home() {
   return (
     <div className='main'>
-    <Grid container spacing={2} className="text">
-      <Grid item size={{ xs: 12, sm: 12, md: 6}}> 
-        <Box
+    <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            filter: 'blur(8px)',       
+            transform: '',  
+            zIndex: -1
+          }}
+        >
+          
+          <source src={video} type="video/mp4" />
+          Sorry, your browser doesn’t support HTML5 video.
+        </video>
+      <Box
           sx={{
-            border: "0px solid",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             height: "100vh",
-            paddingLeft: { xs: "0px", md: "50px" }
-
+            width: "100%",
+            textAlign: "center"
           }}
         >
-          <Hero />
+          <Hero/>
         </Box>
-      </Grid>
-      <Grid item size={{ xs: 12, sm: 12, md: 6 }}> 
-        <Box sx={{
-            border: "0px solid",
-            display: {xs: "None", md: "flex",},
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100vh",
-          }}>
-          <img src={homeImg} height={350} alt="" />
-        </Box>
-      </Grid>
-    </Grid>
+
     </div>
   );
 }

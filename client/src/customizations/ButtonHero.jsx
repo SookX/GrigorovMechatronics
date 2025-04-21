@@ -11,7 +11,7 @@ const Button = () => {
 
 const StyledWrapper = styled.div`
   button {
-    --color: #1976D2;
+    --color: #D32F2F; /* Red 700 */
     display: inline-block;
     width: 8em;
     height: 2.6em;
@@ -23,7 +23,7 @@ const StyledWrapper = styled.div`
     transition: color 0.5s;
     z-index: 1;
     font-size: 17px;
-    background: None;
+    background: none;
     border-radius: 6px;
     font-weight: 500;
     color: var(--color);
@@ -37,16 +37,13 @@ const StyledWrapper = styled.div`
     height: 150px;
     width: 200px;
     border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
   }
 
   button:hover {
     color: #fff;
-  }
-
-  button:before {
-    top: 100%;
-    left: 100%;
-    transition: all 0.7s;
   }
 
   button:hover:before {
@@ -55,8 +52,9 @@ const StyledWrapper = styled.div`
   }
 
   button:active:before {
-    background: #3a0ca3;
+    background: #9A0007; /* Red 900 on active */
     transition: background 0s;
-  }`;
+  }
+`;
 
 export default Button;

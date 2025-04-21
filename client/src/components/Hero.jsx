@@ -10,10 +10,10 @@ export default function Hero() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: { xs: 'center', sm: 'flex-start' }, // Center on mobile, left-align on larger screens
-        pt: { xs: 10, sm: 18 },
-        pb: { xs: 6, sm: 10 },
-        textAlign: { xs: 'center', sm: 'left' }, // Center text on mobile
+        alignItems: 'center',
+        textAlign: 'center',
+        justifyContent: 'center',
+        height: '100%', 
       }}
     >
       <Stack
@@ -21,57 +21,59 @@ export default function Hero() {
         useFlexGap
         sx={{ width: { xs: '100%', sm: '87%' } }}
       >
-        {/* Title */}
         <Typography
-        variant="h1"
-        sx={{
+          variant="h1"
+          sx={{
+            color: "white",
             display: 'flex',
             flexDirection: "column",
-            alignItems: { xs: 'center', sm: 'flex-start' }, 
-            fontSize: { xs: '2rem', sm: 'clamp(2.8rem, 8vw, 4rem)' }, 
-            textAlign: { xs: 'center', sm: 'left' }, 
-            lineHeight: { xs: 1.2, sm: 1.4 }, 
+            alignItems: 'center',
+            fontSize: { xs: '2rem', sm: 'clamp(2.8rem, 8vw, 4rem)' },
+            textAlign: 'center',
+            lineHeight: { xs: 1.2, sm: 1.4 },
             fontWeight: 700,
-        }}
+          }}
         >
-  Automotive&nbsp;Machinery&nbsp;
-  <Typography
-    component="span"
-    variant="h1"
-    sx={(theme) => ({
-      fontSize: 'inherit',
-      color: 'primary.main',
-      ...theme.applyStyles('dark', {
-        color: 'primary.light',
-      }),
-    })}
-  >
-    Solutions
-  </Typography>
-</Typography>
+          Automotive&nbsp;Machinery&nbsp;
+          <Typography
+            component="span"
+            variant="h1"
+            sx={(theme) => ({
+              fontSize: 'inherit',
+              color: 'primary.main',
+              ...theme.applyStyles('dark', {
+                color: 'primary.light',
+              }),
+            })}
+          >
+            Solutions
+          </Typography>
+        </Typography>
+            <br/>
+        {/* Description */}
+        <Typography
+          variant="body1"
+          sx={{
+            color: 'white',
+            border: "0px solid",
+            width: "100%",
+            display: "flex",
+            fontSize: { xs: '1rem', sm: '1.2rem' },
+            textAlign: 'center',
+            
+          }}
+        >
+          Grigorov Mechatronics delivers cutting-edge automotive machinery designed for precision and efficiency.
+          Explore our innovative solutions, engineered to elevate performance and reliability in the industry.
+        </Typography>
 
-{/* Description */}
-<Typography
-  sx={{
-    color: 'text.secondary',
-    width: { xs: '100%', sm: '75%' }, // More width control on large screens
-    fontSize: { xs: '1rem', sm: '1.2rem' }, 
-    textAlign: { xs: 'center', sm: 'left' }, 
-    mt: { xs: 2, sm: 3 }, // Adjust spacing for different screen sizes
-  }}
-  variant="body1"
->
-  Grigorov Mechatronics delivers cutting-edge automotive machinery designed for precision and efficiency. 
-  Explore our innovative solutions, engineered to elevate performance and reliability in the industry.
-</Typography>
-
-        {/* Button Section */}
+        {/* Button */}
         <Stack
           direction="row"
           spacing={2}
           sx={{
             pt: 3,
-            justifyContent: { xs: 'center', sm: 'flex-start' }, // Center on mobile, left-align on larger screens
+            justifyContent: 'center',
             width: '100%',
           }}
         >

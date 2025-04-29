@@ -1,0 +1,31 @@
+{
+  "bg": {
+    "title": "Лазерен заваръчен апарат - Капачка към тръба",
+    "paragraphs": [
+      "Лазерният заваръчен апарат е проектиран да заварява капачки към тръби с прецизност и ефективност. Тази система използва процес на лазерно заваряване, за да създаде здрав и непропусклив уплътнител между капачката и тръбните компоненти.",
+      "Използването на лазерно заваряване осигурява минимално изкривяване на материала и чист, естетически приятен завършек. Автоматизираните функции на машината допринасят за повишаване на производствените нива и постоянно качество.",
+      "Тази машина е идеална за индустрии, които изискват високопрецизно заваряване на капачки към тръби, предлагайки подобрена производителност и превъзходна цялост на заваряването."
+    ]
+  },
+  "en": {
+    "title": "Laser Welder - Cap to pipe",
+    "paragraphs": [
+      "The Laser Welder is engineered to weld caps to pipes with precision and efficiency. This system employs a laser welding process to create a robust and leak-proof seal between the cap and pipe components.",
+      "The use of laser welding ensures minimal material distortion and a clean, aesthetically pleasing finish. The machine’s automated features contribute to increased production rates and consistent quality.",
+      "This machine is ideal for industries that require high-precision welding of caps to pipes, offering enhanced productivity and superior weld integrity."
+    ]
+  },
+  "media": {
+    "images": [
+      "/laserWelder/image22",
+      "/laserWelder/image23",
+      "/laserWelder/image24"
+    ],
+    "videos": [
+      "/laserWelder/media3.mp4",
+      "/laserWelder/media4.mp4",
+      "/laserWelder/media5.mp4"
+
+    ]
+  }
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const Button = ({label}) => {
   return (
     <StyledWrapper>
-      <button>Learn More</button>
+      <button>{label}</button>
     </StyledWrapper>
   );
 }
@@ -20,16 +20,15 @@ const StyledWrapper = styled.div`
     cursor: pointer;
     overflow: hidden;
     border: 2px solid var(--color);
-    transition: color 0.5s;
     z-index: 1;
     font-size: 17px;
     background: none;
     border-radius: 6px;
     font-weight: 500;
-    color: var(--color);
+    color: #fff; /* Force hover text color */
   }
 
-  button:before {
+  button::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -37,21 +36,12 @@ const StyledWrapper = styled.div`
     height: 150px;
     width: 200px;
     border-radius: 50%;
-    top: 100%;
-    left: 100%;
-    transition: all 0.7s;
+    top: -30px; /* Hover position */
+    left: -30px; /* Hover position */
+    transition: none; /* Disable transition if you want it static */
   }
 
-  button:hover {
-    color: #fff;
-  }
-
-  button:hover:before {
-    top: -30px;
-    left: -30px;
-  }
-
-  button:active:before {
+  button:active::before {
     background: #9A0007; /* Red 900 on active */
     transition: background 0s;
   }

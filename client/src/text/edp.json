@@ -1,0 +1,29 @@
+{
+  "bg": {
+    "title": "EDP горещо спояване",
+    "paragraphs": [
+      "Машината за EDP горещо спояване използва технология за горещо спояване за електрически връзки. Тази машина осигурява прецизно и надеждно спояване на компоненти, осигурявайки здрави и издръжливи електрически съединения.",
+      "Горещото спояване предлага прецизен контрол върху температурата и налягането, осигурявайки висококачествени спойки с минимален термичен стрес. Автоматизираните функции на машината допринасят за повишаване на производствените нива и постоянно качество на спояване.",
+      "Тази машина е подходяща за различни приложения за електронно сглобяване, предлагайки ефективно и прецизно спояване за надеждни електрически връзки."
+    ]
+  },
+  "en": {
+    "title": "EDP Hot Bar Soldering",
+    "paragraphs": [
+      "The EDP Hot Bar Soldering machine utilizes hot bar soldering technology for electrical connections. This machine ensures precise and reliable soldering of components, providing strong and durable electrical joints.",
+      "Hot bar soldering offers precise control over temperature and pressure, ensuring high-quality solder joints with minimal thermal stress. The machine's automated features contribute to increased production rates and consistent soldering quality.",
+      "This machine is suitable for various electronic assembly applications, offering efficient and precise soldering for reliable electrical connections."
+    ]
+  },
+  "media": {
+    "images": [
+      "/edp/image57",
+      "/edp/image58",
+      "/edp/image59",
+      "/edp/image60"
+    ],
+    "videos": [
+      "/edp/media15.mp4"
+    ]
+  }
+}

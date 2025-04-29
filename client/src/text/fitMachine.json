@@ -1,0 +1,29 @@
+{
+  "bg": {
+    "title": "Машина за пресова сглобка с 3D сканиране GOCATOR (LMI Technologies)",
+    "paragraphs": [
+      "Машината за пресова сглобка, интегрирана с технология за 3D сканиране от GOCATOR (LMI Technologies), е проектирана за прецизен монтаж на компоненти. Машината използва 3D сканиране, за да осигури точно подравняване и прилягане на частите по време на процеса на пресова сглобка.",
+      "Тази съвременна система съчетава автоматизирани операции по пресова сглобка с 3D инспекция в реално време, осигурявайки висока прецизност и контрол на качеството. Технологията за 3D сканиране GOCATOR предоставя подробни данни за размерите, позволявайки точен монтаж и минимизиране на дефектите.",
+      "Тази машина е идеална за приложения, изискващи високопрецизен монтаж с пресова сглобка, предлагайки повишена точност, подобрено качество на продукта и намалени производствени разходи."
+    ]
+  },
+  "en": {
+    "title": "Press Fit Machine with 3D Scanning GOCATOR (LMI Technologies)",
+    "paragraphs": [
+      "The Press Fit Machine, integrated with 3D scanning technology from GOCATOR (LMI Technologies), is designed for precise component assembly. The machine uses 3D scanning to ensure accurate alignment and fitment of parts during the press-fit process.",
+      "This advanced system combines automated press-fit operations with real-time 3D inspection, ensuring high precision and quality control. The GOCATOR 3D scanning technology provides detailed dimensional data, enabling accurate assembly and minimizing defects.",
+      "This machine is ideal for applications requiring high-precision press-fit assembly, offering enhanced accuracy, improved product quality, and reduced production costs."
+    ]
+  },
+  "media": {
+    "images": [
+      "/fitMachine/image47",
+      "/fitMachine/image48",
+      "/fitMachine/image49"
+    ],
+    "videos": [
+      "/fitMachine/media11.mp4",
+      "/fitMachine/media12.mp4"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "bg": {
+    "title": "Машина за огъване на тел",
+    "paragraphs": [
+      "Машината за огъване на тел е автоматизирана система, предназначена да огъва телове в специфични форми. Тази машина предлага прецизни и повтарящи се операции на огъване, осигурявайки постоянно качество на продукта и намалявайки времето за производство.",
+      "Автоматизираното огъване на тел подобрява ефективността на производството, минимизира отпадъците от материали и позволява създаването на сложни форми на тел. Универсалността на машината я прави подходяща за различни индустрии, изискващи персонализирани телени компоненти.",
+      "Тази машина е ценно решение за производителите, които се стремят да автоматизират своите процеси на огъване на тел, предлагайки повишена производителност, намалени разходи за труд и подобрена консистенция на продукта."
+    ]
+  },
+  "en": {
+    "title": "Wire Bending Machine",
+    "paragraphs": [
+      "The Wire Bending Machine is an automated system designed to bend wires into specific shapes. This machine offers precise and repeatable bending operations, ensuring consistent product quality and reducing manufacturing time.",
+      "Automated wire bending improves production efficiency, minimizes material waste, and allows for the creation of complex wire forms. The machine's versatility makes it suitable for various industries requiring custom wire components.",
+      "This machine is a valuable solution for manufacturers seeking to automate their wire bending processes, offering increased productivity, reduced labor costs, and improved product consistency."
+    ]
+  },
+  "media": {
+    "images": [
+      "/wireBending/image52"
+    ],
+    "videos": [
+      "/wireBending/media13.mp4"
+    ]
+  }
+}

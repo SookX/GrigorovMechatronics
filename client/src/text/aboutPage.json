@@ -1,0 +1,33 @@
+{
+    "en": {
+      "missionTitle": "Our Mission",
+      "missionSecondaryTitle": "Automating for Efficiency and Precision",
+      "missionText": "GMechatronics LTD specializes in automating discrete manufacturing. We create custom production lines for complex product preparation, integrating essential technological processes, automating devices, and control systems.",
+      
+      "expertiseTitle": "Our Expertise",
+      "expertiseHeadline": "Tailored Automation Solutions",
+      "expertiseText": "We provide end-to-end automation solutions, including design, manufacturing, and implementation. Our expertise includes selecting the optimal process structure and equipment layout to coordinate processing and transport operations. We design and manufacture all non-standard parts and create the software and electrical circuits for our machines.",
+      "technologyTitle": "Our Technology",
+      "technologyHeadline": "Advanced Components and Systems",
+      "technologyText": "We utilize modern equipment, including Beckhoff computers and I/O slices for machine control, pneumatics from SMC, Festo, AFAG, and Koganei for P&P systems, and linear motors from Jenny Science and AFAG. Our machines also feature Weiss rotary tables, Trumpf and IPG lasers, and resistance welding equipment from Kombitec Germany. For control systems, we use Cognex cameras and LMI Technologies 3D sensors.",
+      "teamTitle": "Our People",
+      "teamHeadline": "Dedicated to Innovation",
+      "teamText": "Our team includes mechanical engineers who handle design, assembly, and commissioning, CNC operators for part manufacturing and assembly, and an accountant. We also collaborate with software and electrical engineers for larger projects."
+    },
+    "bg": {
+      "missionTitle": "Нашата Мисия",
+      "missionSecondaryTitle": "Автоматизиране за ефективност и прецизност",
+
+      "missionText": "GMechatronics LTD специализира в автоматизацията на дискретното производство. Ние създаваме персонализирани производствени линии за сложна подготовка на крайния продукт, интегрирайки основни технологични процеси, автоматизирайки устройства и системи за управление.",
+      "expertiseTitle": "Нашият Опит",
+      "expertiseHeadline": "Индивидуални Решения за Автоматизация",
+      "expertiseText": "Ние предоставяме цялостни решения за автоматизация, включително проектиране, производство и изпълнение. Нашият опит включва избор на оптимална технологична структура и структурна схема на оборудването за координиране на обработката и транспортните операции. Ние проектираме и произвеждаме всички нестандартни части и създаваме софтуера и електрическите схеми за нашите машини.",
+      "technologyTitle": "Нашата Технология",
+      "technologyHeadline": "Модерни Компоненти и Системи",
+      "technologyText": "Ние използваме модерно оборудване, включително компютри и I/O модули на Beckhoff за управление на машини, пневматика от SMC, Festo, AFAG и Koganei за P&P системи, и линейни двигатели от Jenny Science и AFAG. Нашите машини също така разполагат с ротационни маси Weiss, лазери Trumpf и IPG, и оборудване за съпротивително заваряване от Kombitec Germany. За системите за управление използваме камери Cognex и 3D сензори LMI Technologies.",
+      "teamTitle": "Нашият Екип",
+      "teamHeadline": "Отдадени на Иновациите",
+      "teamText": "Нашият екип включва машинни инженери, които се занимават с проектиране, монтаж и въвеждане в експлоатация, CNC оператори за производство и монтаж на части, и счетоводител. Ние също си сътрудничим със софтуерни и електроинженери за по-големи проекти."
+    }
+  }
+  

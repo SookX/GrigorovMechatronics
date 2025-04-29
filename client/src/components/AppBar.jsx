@@ -13,7 +13,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '../customizations/ColorModeIconDropdown';
 import Sitemark from './SitemarkIcon';
+import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
+import logo from "../assets/logo.png";
+
+// New imports for language switching
+import { useState, useContext } from 'react'; // Changed useState to useContext
+import { SvgIcon } from '@mui/material';
+import Flag from 'react-world-flags'; // You'll need to install this package: npm install react-world-flags
+import { DataContext } from '../context/DataContext';
+import appBarData from "../text/appBar.json";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -33,9 +42,66 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function AppAppBar() {
   const [open, setOpen] = React.useState(false);
+  const { language, setLanguage, languages } = useContext(DataContext); // Use useContext here
+  const data = appBarData[language.code];
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
+  };
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+    console.log(`Language changed to: ${lang.label}`);
+  };
+
+  const renderNavLinks = () => {
+    return (
+      <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+        <Link href="/about" underline="none">
+          <Button variant="text" color="primary" size="small">
+            {data.item1}
+          </Button>
+        </Link>
+        <Link href="/automotive" underline="none">
+          <Button variant="text" color="primary" size="small">
+            {data.item2}
+          </Button>
+        </Link>
+        <Link href="/contacts" underline="none">
+          <Button variant="text" color="primary" size="small">
+            {data.item3}
+          </Button>
+        </Link>
+      </Box>
+    );
+  };
+
+  const renderMobileNavLinks = () => {
+    return (
+      <Box sx={{ p: 2, backgroundColor: 'background.default' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <IconButton onClick={toggleDrawer(false)} sx={{ color: 'primary.main' }}>
+            <CloseRoundedIcon />
+          </IconButton>
+        </Box>
+        <MenuItem>
+          <Button color="primary" variant="text" fullWidth>
+            {data.item1}
+          </Button>
+        </MenuItem>
+        <MenuItem>
+          <Button color="primary" variant="text" fullWidth>
+            {data.item2}
+          </Button>
+        </MenuItem>
+        <MenuItem>
+          <Button color="primary" variant="text" fullWidth>
+            {data.item3}
+          </Button>
+        </MenuItem>
+
+      </Box>
+    );
   };
 
   return (
@@ -50,106 +116,50 @@ export default function AppAppBar() {
       }}
     >
       <Container maxWidth="lg">
-        <StyledToolbar variant="dense" disableGutters>
+        <StyledToolbar variant="dense" sx={{ background: "white" }}>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <Link href="/" sx={{ color: 'primary.main' }}>
-              <Sitemark />
+              <Stack alignItems="center" sx={{ pr: 2 }}>
+                <img src={logo} alt="Company Logo" width="30px" />
+              </Stack>
             </Link>
-            <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
-              <Link href="/about" underline="none">
-                <Button variant="text" color="primary" size="small">
-                  About
-                </Button>
-              </Link>
-              <Link href="/automotive" underline="none">
-                <Button variant="text" color="primary" size="small">
-                  Automotive Machines
-                </Button>
-              </Link>
-              <Link href="/contacts" underline="none">
-                <Button variant="text" color="primary" size="small">
-                  Gallery
-                </Button>
-              </Link>
-              <Link href="/contacts" underline="none">
-                <Button variant="text" color="primary" size="small">
-                  Contacts
-                </Button>
-              </Link>
-            </Box>
+            {renderNavLinks()}
           </Box>
 
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
-            <ColorModeIconDropdown size="medium" sx={{ color: 'primary.main' }} />
-            <IconButton aria-label="Menu button" onClick={toggleDrawer(true)} sx={{ color: 'primary.main' }}>
-              <MenuIcon />
-            </IconButton>
-            <Drawer
-              anchor="top"
-              open={open}
-              onClose={toggleDrawer(false)}
-              PaperProps={{
-                sx: {
-                  top: 'var(--template-frame-height, 0px)',
-                },
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            {/* Language Switcher */}
+            <IconButton
+              onClick={() => {
+                // Find the index based on the 'code' property
+                const currentIndex = languages.findIndex(lang => lang.code === language.code);
+                const nextIndex = (currentIndex + 1) % languages.length;
+                handleLanguageChange(languages[nextIndex]);
               }}
+              sx={{ color: 'primary.main' }}
             >
-              <Box sx={{ p: 2, backgroundColor: 'background.default' }}>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'flex-end',
-                  }}
-                >
-                  <IconButton onClick={toggleDrawer(false)} sx={{ color: 'primary.main' }}>
-                    <CloseRoundedIcon />
-                  </IconButton>
-                </Box>
+              <Stack direction="row" alignItems="center" gap={0.5}>
+                <Flag code={language.flag} height="16" />
+              </Stack>
+            </IconButton>
 
-                {/* Mobile menu items */}
-                <MenuItem>
-                  <Button color="primary" variant="text" fullWidth>
-                    Features
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="text" fullWidth>
-                    Testimonials
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="text" fullWidth>
-                    Highlights
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="text" fullWidth>
-                    Pricing
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="text" fullWidth>
-                    FAQ
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="text" fullWidth>
-                    Blog
-                  </Button>
-                </MenuItem>
-                <Divider sx={{ my: 3 }} />
-                <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
-                    Sign up
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
-                  </Button>
-                </MenuItem>
-              </Box>
-            </Drawer>
+            {/* Mobile Menu Icon */}
+            <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
+              <IconButton aria-label="Menu button" onClick={toggleDrawer(true)} sx={{ color: 'primary.main' }}>
+                <MenuIcon />
+              </IconButton>
+              <Drawer
+                anchor="top"
+                open={open}
+                onClose={toggleDrawer(false)}
+                PaperProps={{
+                  sx: {
+                    top: 'var(--template-frame-height, 0px)',
+                  },
+                }}
+              >
+                {renderMobileNavLinks()}
+              </Drawer>
+            </Box>
           </Box>
         </StyledToolbar>
       </Container>

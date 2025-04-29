@@ -17,7 +17,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",
-    "styled-components": "^6.1.15"
+    "react-world-flags": "^1.6.0",
+    "styled-components": "^6.1.15",
+    "yet-another-react-lightbox": "^3.23.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

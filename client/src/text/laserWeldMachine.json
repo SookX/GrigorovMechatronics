@@ -1,0 +1,29 @@
+{
+  "bg": {
+    "title": "Лазерна заваръчна машина - Заваряване на две тръби от Инконел",
+    "paragraphs": [
+      "Лазерната заваръчна машина е предназначена за прецизно заваряване на две тръби от Инконел. Тази машина използва съвременна лазерна технология, за да създаде здрави и висококачествени заварки. Процесът осигурява минимални топлинно засегнати зони и прецизен контрол върху параметрите на заваряване.",
+      "Лазерното заваряване предлага значителни предимства, включително намалено изкривяване, високи скорости на заваряване и способността за съединяване на разнородни метали. Точността и повторяемостта на машината я правят подходяща за критични приложения в взискателни индустрии.",
+      "Тази машина е отлично решение за производители, изискващи прецизно и надеждно заваряване на тръби от Инконел. Нейната съвременна технология осигурява превъзходно качество на заваряване и повишена производствена ефективност."
+    ]
+  },
+  "en": {
+    "title": "Laser Weld Machine - Weld two Inconel pipe",
+    "paragraphs": [
+      "The Laser Weld Machine is designed for precision welding of two Inconel pipes. This machine utilizes advanced laser technology to create strong, high-quality welds. The process ensures minimal heat-affected zones and precise control over the welding parameters.",
+      "Laser welding offers significant advantages, including reduced distortion, high welding speeds, and the ability to join dissimilar metals. The machine's accuracy and repeatability make it suitable for critical applications in demanding industries.",
+      "This machine is an excellent solution for manufacturers requiring precise and reliable welding of Inconel pipes. Its advanced technology ensures superior weld quality and increased production efficiency."
+    ]
+  },
+  "media": {
+    "images": [
+      "/laserWeldMachine/image17",
+      "/laserWeldMachine/image18",
+      "/laserWeldMachine/image19",
+      "/laserWeldMachine/image20"
+      ],
+    "videos": [
+      "/laserWeldMachine/media2.mp4"
+    ]
+  }
+}

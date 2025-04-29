@@ -1,0 +1,27 @@
+{
+  "bg": {
+    "title": "Дозираща машина в линия",
+    "paragraphs": [
+      "Дозиращата машина в линия е автоматизирана система, която прецизно дозира материали, като лепила или уплътнители, директно в производствената линия. Тази машина осигурява прецизно и последователно нанасяне на материали, подобрявайки качеството на продукта и намалявайки отпадъците.",
+      "Автоматизираното дозиране подобрява производствените процеси чрез минимизиране на ръчния труд, повишаване на точността на нанасяне и осигуряване на еднородност. Безпроблемната интеграция на машината в производствената линия оптимизира потока на материалите и скоростта на производство.",
+      "Тази машина е идеална за индустрии, изискващи прецизно и контролирано дозиране на материали, предлагайки подобрена ефективност, намалени материални разходи и повишена надеждност на продукта."
+    ]
+  },
+  "en": {
+    "title": "Dispenser Machine in Line",
+    "paragraphs": [
+      "The Dispenser Machine in Line is an automated system that accurately dispenses materials, such as adhesives or sealants, directly into the production line. This machine ensures precise and consistent application of materials, improving product quality and reducing waste.",
+      "Automated dispensing enhances manufacturing processes by minimizing manual labor, increasing application accuracy, and ensuring uniformity. The machine's seamless integration into the production line optimizes material flow and production speed.",
+      "This machine is ideal for industries requiring precise and controlled material dispensing, offering improved efficiency, reduced material costs, and enhanced product reliability."
+    ]
+  },
+  "media": {
+    "images": [
+      "/dispenser/image41",
+      "/dispenser/image42"
+    ],
+    "videos": [
+      "/dispenser/media9.mp4"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+
+  {
+      "bg": {
+        "title": "Съпротивително заваряване - Кабел към терминал (Полуавтоматично)",
+        "paragraphs": [
+          "Съпротивителният заваръчен апарат е полуавтоматична машина, предназначена за заваряване на кабели към терминали. Тази система взема тръбата от тавата на конвейера и я поставя в гнездото с капачка на ротационната маса. Заваръчната станция осигурява здрава и прецизна връзка между кабела и терминала.",
+          "Този полуавтоматичен процес повишава ефективността в сравнение с ръчното заваряване, осигурявайки постоянно качество на заваряване и намалявайки риска от грешки. Машината съчетава автоматизирано обработване на материалите с операторски контрол, за да постигне баланс между скорост и прецизност.",
+          "Тази машина е идеална за приложения, изискващи надеждни връзки кабел-терминал, предлагайки подобрена производителност и цялост на заваряването. Тя е ценен актив за производителите, които се стремят да оптимизират своите производствени процеси."
+        ]
+      },
+      "en": {
+        "title": "Resistance Welder - Cable to terminal (Semi-automated)",
+        "paragraphs": [
+          "The Resistance Welder is a semi-automated machine designed for welding cables to terminals. This system takes the tube from the tray on the conveyor and places it in the nest with a cap on the rotary table. The welding station ensures a strong and precise connection between the cable and terminal.",
+          "This semi-automated process increases efficiency compared to manual welding, ensuring consistent weld quality and reducing the risk of errors. The machine combines automated material handling with operator control to achieve a balance of speed and precision.",
+          "This machine is ideal for applications requiring reliable cable-to-terminal connections, offering improved productivity and weld integrity. It is a valuable asset for manufacturers seeking to optimize their production processes."
+        ]
+      },
+      "media": {
+        "images": [
+          "/resistanceWelder/image11",
+          "/resistanceWelder/image12",
+          "/resistanceWelder/image13",
+          "/resistanceWelder/image14",
+          "/resistanceWelder/image15"
+        ],
+        "videos": [
+          "/resistanceWelder/media1.mp4"
+        ]
+      }
+  }
+

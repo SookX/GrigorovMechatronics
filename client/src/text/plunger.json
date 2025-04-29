@@ -1,0 +1,28 @@
+{
+  "bg": {
+    "title": "Машина за сглобяване на плунжер към корпус",
+    "paragraphs": [
+      "Машината за сглобяване на плунжер към корпус автоматизира сглобяването на плунжери в корпуси. Тази машина осигурява прецизно и ефективно сглобяване на тези компоненти, рационализиране на производствения процес.",
+      "Автоматизираното сглобяване намалява ръчната работа, минимизира грешките и увеличава производителността на производството. Точността и повторяемостта на машината осигуряват постоянно качество на продукта.",
+      "Тази машина е ценен актив за производителите, които се стремят да подобрят ефективността и точността на своите процеси на сглобяване, което води до повишена производителност и намалени разходи."
+    ]
+  },
+  "en": {
+    "title": "Plunger to Housing Assembly Machine",
+    "paragraphs": [
+      "The Plunger to Housing Assembly Machine automates the assembly of plungers into housings. This machine ensures precise and efficient assembly of these components, streamlining the manufacturing process.",
+      "Automated assembly reduces manual handling, minimizes errors, and increases production throughput. The machine's accuracy and repeatability ensure consistent product quality.",
+      "This machine is a valuable asset for manufacturers seeking to improve the efficiency and accuracy of their assembly processes, leading to increased productivity and reduced costs."
+    ]
+  },
+  "media": {
+    "images": [
+      "/plunger/image62",
+      "/plunger/image63",
+      "/plunger/image64"
+    ],
+    "videos": [
+      "/plunger/media16.mp4"
+    ]
+  }
+}

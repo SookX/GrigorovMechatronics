@@ -1,0 +1,28 @@
+{
+  "bg": {
+    "title": "Зареждане на компоненти в линия",
+    "paragraphs": [
+      "Машината за зареждане на компоненти в линия е проектирана да автоматизира зареждането на компоненти в производствена линия. Тази машина осигурява прецизно и ефективно поставяне на части, рационализиране на процеса на сглобяване.",
+      "Автоматизацията на зареждането на компоненти намалява ръчната работа, минимизира грешките и увеличава производителността на производството. Интегрирането на машината в производствената линия осигурява непрекъснат и синхронизиран поток от материали.",
+      "Тази машина е ценен актив за производителите, които се стремят да подобрят ефективността и точността на своите процеси на сглобяване, което води до повишена производителност и намалени разходи."
+    ]
+  },
+  "en": {
+    "title": "Components Loading in Line",
+    "paragraphs": [
+      "The Components Loading in Line machine is designed to automate the loading of components within a production line. This machine ensures precise and efficient placement of parts, streamlining the assembly process.",
+      "Automation of component loading reduces manual handling, minimizes errors, and increases production throughput. The machine's integration into the production line ensures a continuous and synchronized flow of materials.",
+      "This machine is a valuable asset for manufacturers seeking to improve the efficiency and accuracy of their assembly processes, leading to increased productivity and reduced costs."
+    ]
+  },
+  "media": {
+    "images": [
+      "/components/image37",
+      "/components/image38",
+      "/components/image39"
+    ],
+    "videos": [
+      "/components/media8.mp4"
+    ]
+  }
+}

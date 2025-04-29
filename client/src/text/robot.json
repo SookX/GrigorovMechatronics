@@ -1,0 +1,27 @@
+{
+  "bg": {
+    "title": "Зареждащ робот за запресоване на фланец",
+    "paragraphs": [
+      "Машината за зареждане на робот за запресоване на фланец автоматизира процеса на зареждане и запресоване на фланци. Роботизираната система прецизно зарежда фланци в станцията за запресоване, осигурявайки точни и последователни операции на запресоване.",
+      "Автоматизирането на процеса на запресоване на фланец увеличава скоростта на производство, намалява ръчната работа и осигурява постоянно качество на запресоване. Гъвкавостта на роботизираната система й позволява да обработва различни размери и конфигурации на фланци.",
+      "Тази машина е идеална за индустрии, изискващи запресоване на големи обеми фланци, предлагайки повишена производителност, намалени разходи за труд и подобрена надеждност на продукта."
+    ]
+  },
+  "en": {
+    "title": "Loading Robot Flange Crimp",
+    "paragraphs": [
+      "The Loading Robot Flange Crimp machine automates the process of loading and crimping flanges. The robotic system precisely loads flanges into the crimping station, ensuring accurate and consistent crimping operations.",
+      "Automating the flange crimping process increases production speed, reduces manual handling, and ensures consistent crimp quality. The robotic system's flexibility allows it to handle various flange sizes and configurations.",
+      "This machine is ideal for industries requiring high-volume flange crimping, offering enhanced productivity, reduced labor costs, and improved product reliability."
+    ]
+  },
+  "media": {
+    "images": [
+      "/robot/image54",
+      "/robot/image55"
+    ],
+    "videos": [
+      "/loadingRobot/media14.mp4"
+    ]
+  }
+}

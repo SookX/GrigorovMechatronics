@@ -1,83 +1,85 @@
 import * as React from 'react';
+import { useContext } from 'react';
+import homePageData from "../text/homePage.json";
+import { DataContext } from '../context/DataContext';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ButtonHero from '../customizations/ButtonHero';
 
 export default function Hero() {
+  const { language } = useContext(DataContext);
+  const data = homePageData[language.code];
   return (
     <Container
       sx={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        textAlign: 'center',
         justifyContent: 'center',
-        height: '100%', 
+        textAlign: 'center',
+        minHeight: '100vh',
+        px: 2,
       }}
     >
       <Stack
-        spacing={2}
+        spacing={3}
         useFlexGap
-        sx={{ width: { xs: '100%', sm: '87%' } }}
+        sx={{ width: { xs: '100%', sm: '85%' }, maxWidth: '900px' }}
       >
         <Typography
           variant="h1"
           sx={{
-            color: "white",
             display: 'flex',
-            flexDirection: "column",
+            flexDirection: 'column',
             alignItems: 'center',
             fontSize: { xs: '2rem', sm: 'clamp(2.8rem, 8vw, 4rem)' },
-            textAlign: 'center',
-            lineHeight: { xs: 1.2, sm: 1.4 },
+            lineHeight: { xs: 1.2, sm: 1.3 },
             fontWeight: 700,
+            color: '#f0f0f0',
+            textShadow: '0 2px 4px rgba(0,0,0,0.4)',
           }}
         >
-          Automotive&nbsp;Machinery&nbsp;
+          {data.title}&nbsp;
           <Typography
             component="span"
             variant="h1"
             sx={(theme) => ({
               fontSize: 'inherit',
-              color: 'primary.main',
-              ...theme.applyStyles('dark', {
-                color: 'primary.light',
-              }),
+              fontWeight: 700,
+              color: theme.palette.primary.light,
+              textShadow: '0 2px 4px rgba(0,0,0,0.3)',
             })}
           >
-            Solutions
+            {data.highlight}
           </Typography>
         </Typography>
-            <br/>
-        {/* Description */}
+
         <Typography
           variant="body1"
           sx={{
-            color: 'white',
-            border: "0px solid",
-            width: "100%",
-            display: "flex",
-            fontSize: { xs: '1rem', sm: '1.2rem' },
+            color: '#e0e0e0',
+            fontSize: { xs: '1rem', sm: '1.25rem' },
+            fontWeight: 800,
             textAlign: 'center',
-            
+            lineHeight: 1.6,
+            maxWidth: '750px',
+            mx: 'auto',
           }}
         >
-          Grigorov Mechatronics delivers cutting-edge automotive machinery designed for precision and efficiency.
-          Explore our innovative solutions, engineered to elevate performance and reliability in the industry.
+          {data.paragraph}
         </Typography>
 
-        {/* Button */}
         <Stack
           direction="row"
           spacing={2}
           sx={{
-            pt: 3,
+            pt: 4,
             justifyContent: 'center',
             width: '100%',
           }}
         >
-          <ButtonHero />
+          <ButtonHero label = {data.button}/>
         </Stack>
       </Stack>
     </Container>

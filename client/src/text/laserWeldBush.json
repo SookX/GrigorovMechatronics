@@ -1,0 +1,28 @@
+{
+  "bg": {
+    "title": "Лазерно заваряване на втулка към фланец - Полуавтоматично",
+    "paragraphs": [
+      "Полуавтоматичната лазерна заваръчна машина е проектирана да заварява втулки към фланци. Тази система съчетава прецизността на лазерното заваряване с полуавтоматична работа, за да се постигне ефективно и надеждно съединяване на компонентите.",
+      "Полуавтоматичният подход оптимизира процеса на заваряване, осигурявайки постоянно качество на заваряване, като същевременно позволява контрол и гъвкавост на оператора. Лазерното заваряване минимизира топлинния принос и изкривяването, запазвайки целостта на частите.",
+      "Тази машина е идеална за производствени приложения, изискващи прецизни и здрави заварки между втулки и фланци, предлагайки повишена производителност и подобрено качество на продукта."
+    ]
+  },
+  "en": {
+    "title": "Laser weld bush to flange - Semi-automated",
+    "paragraphs": [
+      "The Semi-automated Laser Weld Machine is designed to weld bushes to flanges. This system combines the precision of laser welding with semi-automated operation to achieve efficient and reliable joining of components.",
+      "The semi-automated approach optimizes the welding process, ensuring consistent weld quality while allowing for operator control and flexibility. Laser welding minimizes heat input and distortion, maintaining the integrity of the parts.",
+      "This machine is ideal for manufacturing applications requiring precise and robust welds between bushes and flanges, offering increased productivity and improved product quality."
+    ]
+  },
+  "media": {
+    "images": [
+      "/laserWeldBush/image33",
+      "/laserWeldBush/image34",
+      "/laserWeldBush/image35"
+    ],
+    "videos": [
+      "/laserWeldBush/media7.mp4"
+    ]
+  }
+}

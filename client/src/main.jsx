@@ -37,7 +37,7 @@ createRoot(document.getElementById('root')).render(
       <CssBaseline />
       <DataProvider>
         <AppAppBar />
-        <BrowserRouter>
+        <BrowserRouter basename='/GrigorovMechatronics/'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

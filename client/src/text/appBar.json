@@ -2,11 +2,13 @@
     "en": {
         "item1": "About",
         "item2": "Automotive Machines",
-        "item3": "Contacts"
+        "item3": "Contacts",
+        "item4": "Details"
     },
     "bg": {
         "item1": "За нас",
         "item2": "Машиини",
-        "item3": "Контакти"
+        "item3": "Контакти",
+        "item4": "Детайли"
     }
 }

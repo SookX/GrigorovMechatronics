@@ -6,21 +6,16 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import ColorModeIconDropdown from '../customizations/ColorModeIconDropdown';
-import Sitemark from './SitemarkIcon';
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 import logo from "../assets/logo.png";
 
-// New imports for language switching
-import { useState, useContext } from 'react'; // Changed useState to useContext
-import { SvgIcon } from '@mui/material';
-import Flag from 'react-world-flags'; // You'll need to install this package: npm install react-world-flags
+import { useContext } from 'react';
+import Flag from 'react-world-flags';
 import { DataContext } from '../context/DataContext';
 import appBarData from "../text/appBar.json";
 
@@ -42,7 +37,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function AppAppBar() {
   const [open, setOpen] = React.useState(false);
-  const { language, setLanguage, languages } = useContext(DataContext); // Use useContext here
+  const { language, setLanguage, languages } = useContext(DataContext);
   const data = appBarData[language.code];
 
   const toggleDrawer = (newOpen) => () => {
@@ -54,55 +49,60 @@ export default function AppAppBar() {
     console.log(`Language changed to: ${lang.label}`);
   };
 
-  const renderNavLinks = () => {
-    return (
-      <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
-        <Link href="/about" underline="none">
-          <Button variant="text" color="primary" size="small">
-            {data.item1}
-          </Button>
-        </Link>
-        <Link href="/automotive" underline="none">
-          <Button variant="text" color="primary" size="small">
-            {data.item2}
-          </Button>
-        </Link>
-        <Link href="/contacts" underline="none">
-          <Button variant="text" color="primary" size="small">
-            {data.item3}
-          </Button>
-        </Link>
-      </Box>
-    );
-  };
+  const renderNavLinks = () => (
+    <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+      <Link href="/about" underline="none">
+        <Button variant="text" sx={{ color: 'black' }} size="small">
+          {data.item1}
+        </Button>
+      </Link>
+      <Link href="/automotive" underline="none">
+        <Button variant="text" sx={{ color: 'black' }} size="small">
+          {data.item2}
+        </Button>
+      </Link>
+      <Link href="/contacts" underline="none">
+        <Button variant="text" sx={{ color: 'black' }} size="small">
+          {data.item3}
+        </Button>
+      </Link>
+      <Link href="/contacts" underline="none">
+        <Button variant="text" sx={{ color: 'black' }} size="small">
+          {data.item4}
+        </Button>
+      </Link>
+    </Box>
+  );
 
-  const renderMobileNavLinks = () => {
-    return (
-      <Box sx={{ p: 2, backgroundColor: 'background.default' }}>
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <IconButton onClick={toggleDrawer(false)} sx={{ color: 'primary.main' }}>
-            <CloseRoundedIcon />
-          </IconButton>
-        </Box>
-        <MenuItem>
-          <Button color="primary" variant="text" fullWidth>
-            {data.item1}
-          </Button>
-        </MenuItem>
-        <MenuItem>
-          <Button color="primary" variant="text" fullWidth>
-            {data.item2}
-          </Button>
-        </MenuItem>
-        <MenuItem>
-          <Button color="primary" variant="text" fullWidth>
-            {data.item3}
-          </Button>
-        </MenuItem>
-
+  const renderMobileNavLinks = () => (
+    <Box sx={{ p: 2, backgroundColor: 'background.default' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <IconButton onClick={toggleDrawer(false)} sx={{ color: 'black' }}>
+          <CloseRoundedIcon />
+        </IconButton>
       </Box>
-    );
-  };
+      <MenuItem>
+        <Button variant="text" fullWidth sx={{ color: 'black' }}>
+          {data.item1}
+        </Button>
+      </MenuItem>
+      <MenuItem>
+        <Button variant="text" fullWidth sx={{ color: 'black' }}>
+          {data.item2}
+        </Button>
+      </MenuItem>
+      <MenuItem>
+        <Button variant="text" fullWidth sx={{ color: 'black' }}>
+          {data.item3}
+        </Button>
+      </MenuItem>
+      <MenuItem>
+        <Button variant="text" fullWidth sx={{ color: 'black' }}>
+          {data.item4}
+        </Button>
+      </MenuItem>
+    </Box>
+  );
 
   return (
     <AppBar
@@ -118,7 +118,7 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" sx={{ background: "white" }}>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <Link href="/" sx={{ color: 'primary.main' }}>
+            <Link href="/" sx={{ color: 'black' }}>
               <Stack alignItems="center" sx={{ pr: 2 }}>
                 <img src={logo} alt="Company Logo" width="30px" />
               </Stack>
@@ -130,12 +130,11 @@ export default function AppAppBar() {
             {/* Language Switcher */}
             <IconButton
               onClick={() => {
-                // Find the index based on the 'code' property
                 const currentIndex = languages.findIndex(lang => lang.code === language.code);
                 const nextIndex = (currentIndex + 1) % languages.length;
                 handleLanguageChange(languages[nextIndex]);
               }}
-              sx={{ color: 'primary.main' }}
+              sx={{ color: 'black' }}
             >
               <Stack direction="row" alignItems="center" gap={0.5}>
                 <Flag code={language.flag} height="16" />
@@ -144,7 +143,7 @@ export default function AppAppBar() {
 
             {/* Mobile Menu Icon */}
             <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
-              <IconButton aria-label="Menu button" onClick={toggleDrawer(true)} sx={{ color: 'primary.main' }}>
+              <IconButton aria-label="Menu button" onClick={toggleDrawer(true)} sx={{ color: 'black' }}>
                 <MenuIcon />
               </IconButton>
               <Drawer

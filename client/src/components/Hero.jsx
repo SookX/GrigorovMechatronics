@@ -25,7 +25,7 @@ export default function Hero() {
       <Stack
         spacing={3}
         useFlexGap
-        sx={{ width: { xs: '100%', sm: '85%' }, maxWidth: '900px' }}
+        sx={{ width: { xs: '100%', sm: '85%'}, maxWidth: '1000px' }}
       >
         <Typography
           variant="h1"

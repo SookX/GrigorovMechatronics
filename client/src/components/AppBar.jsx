@@ -94,14 +94,14 @@ export default function AppAppBar() {
             {data.item2}
           </Button>
         </Link>
-        <Link href="/contacts" underline="none">
+        <Link href="/details" underline="none">
           <Button variant="text" fullWidth sx={{ color: 'black', justifyContent: 'flex-start' }}>
-            {data.item3}
+            {data.item4}
           </Button>
         </Link>
         <Link href="/contacts" underline="none">
           <Button variant="text" fullWidth sx={{ color: 'black', justifyContent: 'flex-start' }}>
-            {data.item4}
+            {data.item3}
           </Button>
         </Link>
       </Stack>

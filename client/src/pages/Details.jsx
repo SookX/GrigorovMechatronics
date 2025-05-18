@@ -1,131 +1,119 @@
-import React, { useContext, useState } from "react";
-import {
-  Container,
-  Typography,
-  useMediaQuery,
-  useTheme,
-  Grid,
-  Box,
-} from "@mui/material";
+import React, { useEffect, useState, useContext } from "react";
+import { Container, Typography, Box } from "@mui/material";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { DataContext } from "../context/DataContext";
 
 const Details = () => {
   const { language } = useContext(DataContext);
-  const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down("sm"));
-  const isSm = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
-  const cols = isXs ? 1 : isSm ? 2 : 3;
-
-  const details = [
-    {
-      images: [
-        "https://picsum.photos/id/1011/800/600",
-        "https://picsum.photos/id/1012/800/600",
-        "https://picsum.photos/id/1013/800/600",
-      ],
-    },
-    {
-      images: [
-        "https://picsum.photos/id/1021/800/600",
-        "https://picsum.photos/id/1022/800/600",
-      ],
-    },
-    {
-      images: [
-        "https://picsum.photos/id/1031/800/600",
-        "https://picsum.photos/id/1032/800/600",
-        "https://picsum.photos/id/1033/800/600",
-      ],
-    },
-  ];
-
+  const [validImages, setValidImages] = useState([]);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [slides, setSlides] = useState([]);
-  const [startIndex, setStartIndex] = useState(0);
 
-  const handleOpenLightbox = (images) => {
-    const imageSlides = images.map((src) => ({ src }));
-    setSlides(imageSlides);
-    setStartIndex(0);
-    setLightboxOpen(true);
-  };
+  const startNum = 1000063799;
+  const endNum = 1000063858;
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const checkImage = (src) =>
+      new Promise((resolve) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => resolve(src); // return src if successful
+        img.onerror = () => resolve(null); // null if not found
+      });
+
+    async function validateImages() {
+      const imageNumbers = Array.from(
+        { length: endNum - startNum + 1 },
+        (_, i) => startNum + i
+      );
+
+      const imagePaths = imageNumbers.map((num) => `/media/details/${num}.jpg`);
+      const results = await Promise.all(imagePaths.map(checkImage));
+
+      const foundImages = results.filter(Boolean); // remove nulls
+
+      if (isMounted) setValidImages(foundImages);
+    }
+
+    validateImages();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const slides = validImages.map((src) => ({ src }));
 
   return (
-    <Container maxWidth="lg" sx={{ py: 6, paddingTop: 20 }}>
-      {/* Title with underline */}
-      <Typography
-        variant="h4"
-        gutterBottom
-        align="center"
-        sx={{
-          paddingBottom: 2,
-          position: "relative",
-          display: "inline-block",
-          "&::after": {
-            content: '""',
-            position: "absolute",
-            width: "50%",
-            height: 3,
-            backgroundColor: "primary.main",
-            bottom: 0,
-            left: "25%",
-            borderRadius: 2,
-          },
-        }}
-      >
-        {language.code === "bg" ? "Детайли" : "Details"}
-      </Typography>
+    <Container maxWidth="md" sx={{ py: 6, paddingTop: 20 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
+        <Typography
+          variant="h3"
+          sx={{
+            display: "inline-block",
+            position: "relative",
+            color: "primary.main",
+            fontWeight: 700,
+            paddingBottom: 2,
+            "&::after": {
+              content: '""',
+              position: "absolute",
+              width: "60%",
+              height: 4,
+              backgroundColor: "primary.main",
+              bottom: -6,
+              left: "20%",
+              borderRadius: 2,
+            },
+          }}
+        >
+          {language.code === "bg" ? "Детайли" : "Details"}
+        </Typography>
+      </Box>
 
-      <Grid container spacing={3}>
-        {details.map((detail, idx) => (
-          <Grid
-            item
-            key={idx}
-            xs={12}
-            sm={6}
-            md={4}
-            onClick={() => handleOpenLightbox(detail.images)}
+      {validImages.length > 0 ? (
+        <>
+          <Box
+            onClick={() => setLightboxOpen(true)}
             sx={{
-              cursor: "pointer",
+              width: "100%",
+              height: 400,
               borderRadius: 2,
               overflow: "hidden",
-              boxShadow: 3,
+              boxShadow: 4,
+              cursor: "pointer",
               transition: "transform 0.3s",
-              "&:hover": { transform: "scale(1.02)" },
-              position: "relative",
-              aspectRatio: "1 / 1",
+              "&:hover": { transform: "scale(1.01)" },
             }}
           >
             <Box
               component="img"
-              src={detail.images[0]}
-              alt=""
-              loading="lazy"
+              src={validImages[0]}
+              alt="Gallery preview"
               sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                borderRadius: 2,
+                display: "block",
               }}
             />
-          </Grid>
-        ))}
-      </Grid>
+          </Box>
 
-      <Lightbox
-        open={lightboxOpen}
-        close={() => setLightboxOpen(false)}
-        slides={slides}
-        index={startIndex}
-        on={{ view: ({ index }) => setStartIndex(index) }}
-        carousel={{ finite: true }}
-      />
+          <Lightbox
+            open={lightboxOpen}
+            close={() => setLightboxOpen(false)}
+            slides={slides}
+            carousel={{ finite: false }}
+          />
+        </>
+      ) : (
+        <Typography>
+  {language.code === "bg" ? "Снимките зареждат..." : "Loading images..."}
+</Typography>
+      )}
     </Container>
   );
 };

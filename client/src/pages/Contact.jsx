@@ -46,7 +46,7 @@ const Contact = () => {
                   style={{ border: 0, borderRadius: "inherit" }}
                   loading="lazy"
                   allowFullScreen
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.088327616797!2d23.848085204407816!3d42.91317811376694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa5094cdcb73e1%3A0x550d6bb9f8d91103!2s3%2076%2C%202160%20Trudovets%2C%20Bulgaria!5e0!3m2!1sen!2sit!4v1745472413368!5m2!1sen!2sit"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.315526146254!2d23.84142387597798!3d42.9083861002842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa50965a3a742b%3A0x8bddf12c3a12a743!2sGRIGOROV%20MECHATRONICS%20BASE%202!5e0!3m2!1sen!2sbg!4v1747476319789!5m2!1sen!2sbg"
                 ></iframe>
               </CardContent>
             </Card>
@@ -77,6 +77,18 @@ const Contact = () => {
                     sx={{ color: "inherit" }}
                   >
                     0889397324
+                  </Link>
+                </Typography>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+                <PhoneIcon color="primary" sx={{ mr: 1, fontSize: 28 }} />
+                <Typography variant="body1" sx={{ color: "#555" }}>
+                  <Link
+                    href="tel:+0878506620"
+                    underline="none"
+                    sx={{ color: "inherit" }}
+                  >
+                    0878506620
                   </Link>
                 </Typography>
               </Box>

@@ -9,6 +9,7 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Automotive from './pages/Automotive.jsx';
+import Details from './pages/Details.jsx';
 
 import Footer from './components/Footer.jsx';
 import './style/main.css';
@@ -42,7 +43,9 @@ createRoot(document.getElementById('root')).render(
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contact />} />
+            <Route path='/details' element={<Details/>}/>
             <Route path="/automotive" element={<MainAutomotive />}>
+    
               <Route index element={<Automotive info={mainAutomotiveData} />} />
               <Route path="resistance_welder" element={<Automotive info={resistanceWelderData} />} />
               <Route path="laser_weld_machine" element={<Automotive info={laserWeldMachineData} />} />

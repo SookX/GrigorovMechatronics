@@ -6,6 +6,8 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ButtonHero from '../customizations/ButtonHero';
+import Link from '@mui/material/Link';
+
 
 export default function Hero() {
   const { language } = useContext(DataContext);
@@ -79,7 +81,10 @@ export default function Hero() {
             width: '100%',
           }}
         >
+        <Link href="/about" underline="none">
+
           <ButtonHero label = {data.button}/>
+          </Link>
         </Stack>
       </Stack>
     </Container>

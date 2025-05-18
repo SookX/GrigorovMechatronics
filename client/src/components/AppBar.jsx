@@ -61,16 +61,17 @@ export default function AppAppBar() {
           {data.item2}
         </Button>
       </Link>
+      <Link href="/details" underline="none">
+        <Button variant="text" sx={{ color: 'black' }} size="small">
+          {data.item4}
+        </Button>
+      </Link>
       <Link href="/contacts" underline="none">
         <Button variant="text" sx={{ color: 'black' }} size="small">
           {data.item3}
         </Button>
       </Link>
-      <Link href="/contacts" underline="none">
-        <Button variant="text" sx={{ color: 'black' }} size="small">
-          {data.item4}
-        </Button>
-      </Link>
+  
     </Box>
   );
 
@@ -81,28 +82,32 @@ export default function AppAppBar() {
           <CloseRoundedIcon />
         </IconButton>
       </Box>
-      <MenuItem>
-        <Button variant="text" fullWidth sx={{ color: 'black' }}>
-          {data.item1}
-        </Button>
-      </MenuItem>
-      <MenuItem>
-        <Button variant="text" fullWidth sx={{ color: 'black' }}>
-          {data.item2}
-        </Button>
-      </MenuItem>
-      <MenuItem>
-        <Button variant="text" fullWidth sx={{ color: 'black' }}>
-          {data.item3}
-        </Button>
-      </MenuItem>
-      <MenuItem>
-        <Button variant="text" fullWidth sx={{ color: 'black' }}>
-          {data.item4}
-        </Button>
-      </MenuItem>
+  
+      <Stack spacing={1} mt={2}>
+        <Link href="/about" underline="none">
+          <Button variant="text" fullWidth sx={{ color: 'black', justifyContent: 'flex-start' }}>
+            {data.item1}
+          </Button>
+        </Link>
+        <Link href="/automotive" underline="none">
+          <Button variant="text" fullWidth sx={{ color: 'black', justifyContent: 'flex-start' }}>
+            {data.item2}
+          </Button>
+        </Link>
+        <Link href="/contacts" underline="none">
+          <Button variant="text" fullWidth sx={{ color: 'black', justifyContent: 'flex-start' }}>
+            {data.item3}
+          </Button>
+        </Link>
+        <Link href="/contacts" underline="none">
+          <Button variant="text" fullWidth sx={{ color: 'black', justifyContent: 'flex-start' }}>
+            {data.item4}
+          </Button>
+        </Link>
+      </Stack>
     </Box>
   );
+  
 
   return (
     <AppBar
